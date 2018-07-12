@@ -1,0 +1,113 @@
+// Dashboarding the UI Prixia
+$color-dash: rgb(244, 245, 247);
+$v: 50;
+.page{
+  width:100%;
+  height: 100%;
+  display:flex;
+  flex-direction:row;
+  justify-content: flex-start;
+  
+  .sub-nav{
+  	display: flex;
+	width: 100%;
+  }
+}
+.side_bar{
+    background-color: #ffffff;
+    padding: padding-global(p3) padding-global(p1);
+    width:350px;	
+    z-index: 300;
+    @include shadow(1.2);
+    height: 100%;
+    position: relative;
+    .content-panel-side{
+
+		.item{
+			display: flex;
+		    width: 100%;
+		    height: 40px;
+		    border-radius: 3px;
+		    cursor: pointer;
+		    align-items: center;
+		    margin-bottom: margin-global(m3);
+		    @include trans(background .45s, $cubic-1);
+		    &:hover{
+		    	background: hsl(0, 0%, 93.3%);
+		    }
+		    
+
+		}
+		.material-icon{
+			color: text(black , $v);
+			margin-right: margin-global(m1);
+			margin-left: margin-global(m1);
+		}
+		a{
+			color: text(black , $v);
+		}
+	}
+    
+}
+.sub_panel{
+    color: rgb(222, 235, 255);
+    background-color: scotch-color('success', 'base');
+    box-sizing: border-box;
+    width: 83px;
+    padding: padding-global(p3);
+
+    .content-panel-sub{
+	    -webkit-box-flex: 1;
+	    flex-grow: 1;
+	    flex-shrink: 1;
+	    flex-basis: 0px;
+	    .item{
+	    	    display: flex;
+	    	    justify-content: center;
+			    width: 100%;
+			    height: 40px;
+			    border-radius: 50%;
+			    cursor: pointer;
+			    color: #f5f5f5;
+			    align-items: center;
+			    margin-bottom: margin-global(m3);
+			    opacity: 0;
+			    @include trans(background .45s, $cubic-1);
+			    &:hover{
+			    	background: rgba(9, 30, 66, 0.42);
+			    }
+	    }
+    }
+}
+
+.wrapper_content{
+	width: 100%;
+	overflow: auto;
+	float: left;
+	.wrapper_content_content{
+		padding: margin-global(m3) margin-global(m1);
+	}	
+	.panel-name{
+		padding: padding-global(p3) padding-global(p1);
+		background-color: #fff;
+		@include shadow(1.2);
+		width: 100%;
+		border-right: 8px solid scotch-color('success', 'base');
+		h3{
+			color: text(black , $v);
+			margin: 0;
+			font-weight: 400;
+		}
+	}
+}
+
+/*.text-grandient{
+	 position: relative;
+    display: inline-block;
+
+    margin: 0;
+  background: -webkit-linear-gradient(0deg, #2193b0, #6dd5ed); 
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}*/

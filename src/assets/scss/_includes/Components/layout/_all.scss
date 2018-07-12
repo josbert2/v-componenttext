@@ -1,0 +1,17 @@
+$p-section:  padding-global(p1) + padding-global(p1) + padding-global(p1) 
+			 padding-global(p1) 
+			 padding-global(p1) + padding-global(p1) + padding-global(p1) 
+			 padding-global(p1);
+
+$m-section: margin-global(m1) + margin-global(m1);
+@import '_dashboard';
+@import '_vue';
+.main-title{
+	text-align: center;
+	padding: 0 padding-global(p3);
+	font-size: prisma-sz(h1);
+	text-transform: uppercase;
+	font-weight: 900;
+	letter-spacing: 2px;
+	@include font-pluto();
+}

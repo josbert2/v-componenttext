@@ -1,0 +1,196 @@
+//Stack Color 1
+$gutter: 18px; //Margenes y padding
+$puple: #673ab7; 
+$black: #313D4B;
+$black1: #283149;
+$black2: #414756;  
+$grey: #A5ABBD;
+$rosa: #CA2E9F;
+$rosa2: #FF4C7C;
+$oranje: #FF855D;
+$oranje2: #FFC052;
+$yellow: #F9F871;
+
+//Stack Color 2
+$blue: #0063DA;
+$blue1: #007FE4;
+$blue2: #007FE4;
+$blue3: #0094D7;
+$blue4: #00A5BA;
+$green: #00B397;
+$green2: #00DEB4;
+$red: #FC4442;
+
+
+//Asana
+$bg-linear:#9287ff;
+$bg-linear2: #32c1ff;
+
+
+// Box Shadow
+
+$box-shadow1: 0px 5px 10px 0px rgba(0,64,128,0.05);
+$box-shadow2: 0 3px 5px -1px rgba(0,0,0,.2), 0 6px 10px 0 rgba(0,0,0,.14), 0 1px 18px 0 rgba(0,0,0,.12);
+$box-shadow-base:  0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+
+$scotch-color-key: 'base' !default;
+
+$just-border: rgba(206,206,206,0.4);
+
+//Colores //VARIABLES
+//Black
+$black-100:   rgba(0,0,0,1);
+$black-90:    rgba(0,0,0,0.9);
+$black-80:    rgba(0,0,0,0.8);
+$black-70:    rgba(0,0,0,0.7);
+$black-60:    rgba(0,0,0,0.6);
+$black-50:    rgba(0,0,0,0.5);
+$black-40:    rgba(0,0,0,0.4);
+$black-30:    rgba(0,0,0,0.3);
+$black-20:    rgba(0,0,0,0.2);
+$black-10:    rgba(0,0,0,0.1);
+
+//White
+$white-100:   rgba(255,255,255,1);
+$white-90:    rgba(255,255,255,0.9);
+$white-80:    rgba(255,255,255,0.8);
+$white-70:    rgba(255,255,255,0.7);
+$white-60:    rgba(255,255,255,0.6);
+$white-50:    rgba(255,255,255,0.5);
+$white-40:    rgba(255,255,255,0.4);
+$white-30:    rgba(255,255,255,0.3);
+$white-20:    rgba(255,255,255,0.2);
+$white-10:    rgba(255,255,255,0.1);
+
+//Invisible
+$transparent:   rgba(255,255,255,0);
+$scotch-colors: (
+  'Prisma': (
+  'f1': #030303,
+  'f2': #464646,
+  'f3': #888888,
+  'f4': #b1b1b1,
+  'f5': #030303,
+  'f6': #1c1c1c,
+  'f7': #2d2d2d,
+  'light': #F5F7FA,
+  'light-after': #f7f7f7,
+  'light-key': #eaeaea,
+  'for-text': #8d8d8d
+
+
+  ),
+  'lvl':(
+    '1': rgba(0, 0, 0, .01),
+    '2': rgba(0, 0, 0, .02),
+    '3': rgba(0, 0, 0, .03),
+    '4': rgba(0, 0, 0, .04),
+    '5': rgba(0, 0, 0, .05),
+    ),
+  'text': (
+    'white': #fff,
+    'base': #3C3B3D,
+    'light': #F5F7FA,
+    'light-after': #f7f7f7,
+    'light-key': #eaeaea,
+    'for-text': #8d8d8d,
+    'dark': #4d545d
+  ),
+  'primary': (
+    'base': #29b6f6,
+    'light': #4b7bec,
+    'dark': #444ce0
+  ),
+  'danger': (
+	'base': #f2403c,
+	'light': #ff6b6b,
+	'dark': #ee5253,
+  'custom': #ff3860
+  ),
+  'warning': (
+	'base': #fdd835,
+	'light': #feca57,
+	'dark': #f7b731
+  ),
+  'success': (
+	'base': #4acaa8,
+	'light': #26de81,
+	'dark': #20bf6b
+  ),
+  'pink': (
+    'base': #E91E63,
+    'light': #FF4081,
+    'dark': #C2185B
+   ),
+  'orange': (
+    'base': #f55d2c
+    ),
+   'purple': (
+	'base':  #794aca,
+	'light': #a55eea,
+	'dark': #5f27cd
+  ),
+   'black': (
+	'base': #1e1e1e,
+	'light': #313944,
+	'dark': #4d5259
+  ),
+
+  'accent': (
+    'base': #d98328,
+    'light': #dd8f3d,
+    'dark': #c57623
+  ),
+  'secondary': (
+    'base': #5a1321,
+    'light': #7b1a2d,
+    'dark': #51111e
+  ),
+  'foreground': (
+    'base': #191919,
+    'light': #333333,
+    'dark': #111111,
+    'darker': #000000
+  ),
+  'background': (
+    'base': #e9e9e9,
+    'light': #ffffff,
+    'dark': #dddddd
+  )
+);
+
+
+$scotch-opacity: (
+  'light': 0.8, 
+  'dark': 0.4,
+  'null': 0.2,
+  'opacity': 0.1, 
+
+);
+
+@function scotch-color(
+  $name: 'primary',
+  $variant: $scotch-color-key,
+  $opacity: 1
+) {
+  $color: null;
+  
+  // Get the color spectrum
+  $color-spectrum: map-get($scotch-colors, $name);
+  
+  // Get the color variant
+  @if $color-spectrum {
+    $color: map-get($color-spectrum, $variant);
+  }
+  
+  // Get the alpha setting
+  $alpha: if(type-of($opacity) == 'number', $opacity, map-get($scotch-opacity, $opacity));
+  
+  // Set the alpha of the color
+  @if $alpha {
+    $color: rgba($color, $alpha);
+  }
+  
+  @return $color;
+}
+

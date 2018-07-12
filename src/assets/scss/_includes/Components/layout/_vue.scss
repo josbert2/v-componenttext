@@ -1,0 +1,72 @@
+.router-link-exact-active {
+	background: hsl(0, 0%, 93.3%);	
+	span{
+		color: text(black , $v) !important;
+	}
+}
+
+.IS-ACTIVATED{
+	border-radius: 50%;
+	background: hsl(0, 0%, 93.3%);	
+	span{
+		color: text(black , $v) !important;
+	}
+}
+
+.fade-enter-active, .fade-leave-active {
+  @include trans(opacity .45s, $cubic-1);
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+}
+
+.vue-tooltip{
+	background-color:  scotch-color('black', 'base')!important;z-index: 1000 !important;
+}
+.vue-tooltip[x-placement^="right"] .tooltip-arrow{
+	border-right-color:  scotch-color('black', 'base')!important;
+}
+
+.code-example{
+	margin: 0 0 margin-global(m1) 0;
+	@include shadow(1.2);
+	border-radius: 4px;
+	.code-panel{
+		position: relative;
+		z-index: 1;
+		background-color: text(black , 10);
+		color: text(black , $v);
+		padding: padding-global(p4) padding-global(p1);		
+		display: flex;
+		.title{
+			@include font-bold-rounded();
+		}
+
+
+	}
+	.code-content{
+		display: -webkit-box;
+		min-height: 86px;
+
+		padding: padding-global(p6) padding-global(p1);	
+		position: relative;
+		border: 1px solid rgba(161, 161, 161, 0.1);
+		.code-line{
+			.code-description{
+				line-height: 28px;
+				color: text(black , 40);
+				margin: 0 0 margin-global(m3) 0;
+				span{
+					color: #777398;
+					padding: .25rem .5rem;
+					margin: 0;
+					font-size: .85em;
+					background-color: rgba(27,31,35,.05);
+					border-radius: 3px;
+					font-family: source-code-pro,Menlo,Monaco,Consolas,Courier New,monospace;
+				}
+			}
+		}
+
+	}
+}
